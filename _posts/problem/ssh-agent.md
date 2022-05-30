@@ -1,0 +1,96 @@
+---
+layout: post
+title: 每次重启后都要重新生成/添加ssh key
+tags: 运维
+---
+
+起因是用sourcetree管理多个git账户，第一次添加是正常使用过一段时间的，但切换git后，每次使用都要重新添加一次ssh密钥。
+后来卸载sourcetree，只管理一个git账户，直接在dos里使用命令，依然每次都需要添加密钥，或者重新生成，或者ssh-add手动添加，烦恼不堪。
+
+## 问题复现
+dos中查看ssh是可用的：
+```
+ssh -i ~/.ssh/1****2027@163.com -vT git@github.com
+...
+Hi zhaotong2027! You've successfully authenticated, but GitHub does not provide shell access.
+...
+```
+但调用git命令时权限被拒绝了：
+```
+git@github.com: Permission denied (publickey).
+```
+
+## 临时方案（生效）
+dos中运行：
+```
+ssh-agent -s
+ssh-add ~/.ssh/1****2027@163.com
+```
+
+## 探究原因
+每次用ssh-add添加到ssh agent是个临时方案，ssh-add这个命令不是用来永久性的记住使用的私钥的。实际上，它的作用只是把指定的私钥添加到ssh-agent所管理的一个session当中。
+而ssh-agent是一个用于存储私钥的临时性的session服务，也就是说当你重启之后，ssh-agent服务也就重置了。
+
+## 溯源
+查ssh agent在官网找到这篇文章 [生成新的SSH密钥并将其添加到ssh-agent](https://docs.github.com/cn/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?spm=a2c6h.12873639.article-detail.6.51ca1ff9UB21vq#adding-your-ssh-key-to-the-ssh-agent)
+
+## 方案一（生效）
+配置全局git config：
+```
+git config --global -e
+
+[core]
+        excludesfile = /Users/zhaotong/.gitignore_global
+[user]
+        name = zhaotong2027
+        email = 1****2027@163.com
+[commit]
+        template = /Users/zhaotong/.stCommitMsg
+```
+
+配置ssh config（单独为某一网站配失效）：
+```
+touch ~/.ssh/config
+vim ~/.ssh/config
+
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/1****2027@163.com
+```
+
+隐含问题：大概十天没打开电脑，config方法失效了，推测可能有保质期还未查证，用暂时办法解决了，以观后效
+
+## 方案二（未使用）
+
+ssh-agent自动化：
+```
+vim ~/.zshrc
+
+#!/bin/sh
+proc_name="ssh-agent"
+proc_id=`ps -ef|grep -i ${proc_name}|grep -v "grep"|awk '{print $2}'`
+ 
+for id in ${proc_id[*]}
+do
+    echo "kill old agent ${id}"
+    kill -9 ${id}
+done
+ 
+eval `ssh-agent |tee ~/.agent.env`
+ssh-add ~/.ssh/1****2027@163.com
+
+```
+
+### 方案三（未使用，对使用多git账户友好）
+根据不同的本地仓库分别配置gitconfig
+
+多git账户已解决：[同一台Mac配置多个github账户](DevOps/同一台Mac配置多个github账户)
+
+### 方案四（未使用）
+用gpg-agent替代ssh-agent
+
+参考文章1：[sourcetree下ssh-agent重启后环境不同无法自动运行](https://www.cnblogs.com/mottledbamboo/p/8392399.html)
+
+参考文章2：[Git多个SSH KEYS解决方案](https://developer.aliyun.com/article/6923)
+
+参考文章3：[如何设置ssh-agent为自动运行](https://docs.oracle.com/cd/E19683-01/806-4078/6jd6cjrub/index.html)
