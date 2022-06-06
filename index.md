@@ -7,11 +7,13 @@ title: 首页
 
 ### TODO（progress）： ###
 
-Nothing
+new blog-jekyll（mermaid）
+
+source code（spring）
 
 ### Doing（progress）: ###
 
-new blog-jekyll（mermaid）
+algo（tree）
 
 
 
@@ -33,6 +35,10 @@ new blog-jekyll（mermaid）
 [七层协议]({{ site.baseurl }}{% link _posts/base/2022-04-19-OSI-TCPIP.md %})
 
 [编译&解释 Java&Python]({{ site.baseurl }}{% link _posts/base/2022-04-19-compile-interpretat-Java-Python.md %})
+
+#### 算法
+
+[算法小结]({{ site.baseurl }}{% link _posts/algo/2022-06-06-algorithm.md %})
 
 #### 问题解决
 
