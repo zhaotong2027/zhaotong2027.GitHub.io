@@ -46,7 +46,8 @@ https://blog.csdn.net/cuman/article/details/112394423
 | 8079 |  禅道  | Apach |
 | 8077 |  禅道  | mysql |
 
-各软件位置及常用命令
+##### 各软件位置及常用命令
+
 | 软件名 | 重启命令 | 是否开机启动 |
 | :---- | :-------: | -------: |
 | nginx | nginx -s reload / nginx stop / nginx quit | Y |
@@ -60,9 +61,10 @@ https://blog.csdn.net/cuman/article/details/112394423
 | :----- | :--: | :-------: | :-------: |
 | nginx | /usr/local/nginx-1.8.0 | /usr/local/nginx/conf/ |     日志位置 |
 | mysql | /usr/bin/mysql | /etc/my.cnf /etc/profile | /var/log/mysqld.log |
-| jira | /opt/atlassian/jira /var/atlassian/application-data/jira | /etc/profile /opt/atlassian/jira/conf/server.xml  | 日志 ｜
+| jira | /opt/atlassian/jira /var/atlassian/application-data/jira | /etc/profile /opt/atlassian/jira/conf/server.xml  | 日志 ｜|
 | confluence | /opt/atlassian/confluence /var/atlassian/application-data/confluence | /opt/atlassian/confluence/confluence/WEB-INF/classes/confluence-init.properties /opt/atlassian/confluence/conf/server.xml | /var/atlassian/application-data/confluence/logs/atlassian-confluence.log |
 | crowd | /opt/atlassian/crowd /var/crowd-home | /opt/atlassian/crowd/crowd-webapp/WEB-INF/classes/crowd-init.properties | /var/crowd-home/logs/atlassian-crowd.log |
+| gitlab | /etc/gitlab | /etc/gitlab/gitlab.rb /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml | /var/log/gitlab |
 
 
 https://cloud.tencent.com/developer/article/1841809
@@ -72,11 +74,21 @@ https://www.cnblogs.com/ling-yu-amen/p/10487739.html
 
 ## 换网设置ip的位置
 ```
+# 服务器
 vim /etc/sysconfig/network-scripts/ifcfg-eth0
 vim /var/crowd-home/crowd.properties
-vim /opt/atlassian/confluence/conf/server.xml # baseurl存在atlassian服务器上，导致该文件改了也没用(这个版本已经不需要改sever.xml，用域名代替ip)
+vim /opt/atlassian/confluence/conf/server.xml  # baseurl存在atlassian服务器上，导致该文件改了也没用(这个版本已经不需要改sever.xml，用域名代替ip)
+vim /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml  # host 修改gitlab地址
+vim /etc/gitlab/gitlab.rb  # external_url 修改旧项目地址
+sudo gitlab-ctl reconfigure  # 修改完重启
 ```
 库crowd里表cwd_application_address修改数据库ip
+
+```
+# 本机
+vim ~/.ssh/config  # HostName
+```
+
 参考：[换ip配置server](https://mp.weixin.qq.com/s?__biz=MzU0NzUxMzYzOA==&mid=2247483731&idx=1&sn=d509821104bc28f60b8e4c20ef42b03d&chksm=fb4c751acc3bfc0c050b2700f2cb3dd0a0f821c79560a18ad9ba7cb92cd7db677a9fa2643f77&token=1232437534&lang=zh_CN#rd)
 
 

@@ -29,6 +29,12 @@ Host github_sha****.com
     User sha****
     PreferredAuthentications publickey
     IdentityFile ~/.ssh/sha****@foxmail.com
+# gitlab-zhaotong
+Host gitlab_myserver.com
+    HostName 192.168.1.9
+    User zhaotong
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/myserver@163.com
 ```
 
 2、拉取代码设置
@@ -49,6 +55,14 @@ Sha****账户：
 git clone git@github.com:shamingai/study-python-demo.git
 修改为：
 git clone git@github_sha****.com:sha****/study-python-demo.git
+```
+
+我的服务器账户：
+
+```
+git clone git@192.168.1.9:server/test.git
+修改为：
+git clone git@gitlab_myserver.com:server/test.git
 ```
 
 3、已有项目关联
