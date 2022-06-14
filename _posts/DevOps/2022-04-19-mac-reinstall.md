@@ -253,6 +253,13 @@ export PATH=${PATH}:/Users/zhaotong/.local/share/gem/ruby/3.1.0/bin
 jekyll -v
 ```
 
+卸载hexo
+
+```
+npm uninstall hexo-cli -g
+npm uninstall hexo
+```
+
 - 5.5 jupyter
 
 ```
@@ -281,3 +288,24 @@ brew install maven
 ```
 mvn -v
 ```
+
+- 5.8 gradle
+
+```
+brew search gradle
+brew install gradle
+```
+
+设置环境变量~/.zshrc（配完记得启用生效source ~/.zshrc）
+
+```
+#gradle
+export PATH=${PATH}:/Users/zhaotong/.local/share/gem/ruby/3.1.0/bin
+```
+
+验证
+
+```
+gradle -v
+```
+
