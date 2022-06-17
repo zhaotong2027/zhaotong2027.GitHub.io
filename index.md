@@ -20,7 +20,7 @@ algo（tree）
 
 ### Done： ###
 
-#### 运维（配置、搭建和维护）
+#### 一、运维（配置、搭建和维护）
 
 [同一台Mac配置多个github账户]({{ site.baseurl }}{% link _posts/DevOps/2022-05-27-Mac-githubs.md %})
 
@@ -30,17 +30,25 @@ algo（tree）
 
 [搭建git博客]({{ site.baseurl }}{% link _posts/DevOps/2022-04-19-blog-git.md %})
 
-#### 基础（网络、语言）
+#### 二、基础（网络、语言）
 
 [七层协议]({{ site.baseurl }}{% link _posts/base/2022-04-19-OSI-TCPIP.md %})
 
 [编译&解释 Java&Python]({{ site.baseurl }}{% link _posts/base/2022-04-19-compile-interpretat-Java-Python.md %})
 
-#### 算法
+#### 三、算法
 
 [算法小结]({{ site.baseurl }}{% link _posts/algo/2022-06-06-algorithm.md %})
 
-#### 问题解决
+[爬楼梯 斐波那契数列 动态规划]({{ site.baseurl }}{% link _posts/algo/2022-06-15-dynamic-programing.md %})
+
+#### 四、[源码]({{ site.baseurl }}{% link _posts/SourceCode/2022-06-13-source-code-spring.md %})
+
+[sping里的工厂模式BeanFactory --IOC]({{ site.baseurl }}{% link _posts/SourceCode/2022-06-17-IOC.md %})
+
+[sping里的工厂模式BeanFactory --IOC]({% post_url 2022-06-17-IOC %})
+
+#### 五、问题
 
 [allure在Mac中配置不成功]({{ site.baseurl }}{% link _posts/problem/2022-04-19-shell-mac.md %})
 

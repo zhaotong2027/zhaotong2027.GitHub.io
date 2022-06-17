@@ -5,7 +5,7 @@ title: 爬楼梯 斐波那契数列 动态规划
 
 ## 一、题目
 
-https://leetcode.cn/problems/climbing-stairs/
+[https://leetcode.cn/problems/climbing-stairs/](https://leetcode.cn/problems/climbing-stairs/)
 
 这是一道简单题，核心是找到爬楼梯的规律，通过题目不难看出是斐波那契数列（每个数都是前两个数之和），有目标答案实现解体过程并不难。
 
@@ -13,7 +13,7 @@ https://leetcode.cn/problems/climbing-stairs/
 
 因此写本文的目的不在于如何解这道题，在于捋清解题思路，为什么是斐波那契数列。
 
-本题给的条件有两个，1、一次爬一个台阶，2、一次爬两个台阶；
+本题给的条件有两个，1、一步爬一个台阶，2、一次步两个台阶；
 
 ##### 那么 a 只爬一阶时，只有一种方法，1阶，可以写成：
 
@@ -111,4 +111,4 @@ https://leetcode.cn/problems/climbing-stairs/
 
 动态规划是运筹学的一个分支，是求解决策过程最优化的过程。在背包问题、生产经营问题、资金管理问题、资源分配问题、最短路径问题和复杂系统可靠性问题等中取得了显著的效果。
 
-一个最短路径的例题：https://leetcode.cn/problems/minimum-path-sum/
+最短路径的例题：[https://leetcode.cn/problems/minimum-path-sum/](https://leetcode.cn/problems/minimum-path-sum/)
