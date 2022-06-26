@@ -9,7 +9,7 @@ title: AbstractApplicationContext 的 refresh()
 		synchronized (this.startupShutdownMonitor) {
 			// Prepare this context for refreshing.
 			/**
-			 * 前戏，做容器刷新前的准备工作
+			 * 准备，做容器刷新前的准备工作
 			 * 1、设置容器的启动时间
 			 * 2、设置活跃状态为true
 			 * 3、设置关闭状态为false
