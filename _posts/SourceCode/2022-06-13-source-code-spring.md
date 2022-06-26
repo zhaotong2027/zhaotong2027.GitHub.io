@@ -7,9 +7,11 @@ title: spring 源码
 
 ##### 形成习惯：
 
-1、常看类图：类名右击 -> diagrams -> show diagram 或快捷键 option+command+U
+1、常看抽象类的类图：类名右击 -> diagrams -> show diagram 或快捷键 option+command+U
 
 2、常看接口实现化：接口左侧向上向下带 I 标签的绿色箭头
+
+3、多看类的结构：Idea右侧的Structure面板
 
 
 
