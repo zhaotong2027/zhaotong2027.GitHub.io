@@ -17,4 +17,3 @@ permalink: /about/
 [jekyll-organization]: https://github.com/jekyll
 
 本博客是基于 jekyll 和 Minima 创建的，你可以在 GitHub 上找到本博客的[源代码](https://github.com/zhaotong2027/zhaotong2027.GitHub.io)。
-

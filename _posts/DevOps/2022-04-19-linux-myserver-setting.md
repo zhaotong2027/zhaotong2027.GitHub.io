@@ -129,4 +129,3 @@ vim ~/.ssh/config  # HostName
 | redis |    | 123456 |
 | 新建 |  m  | |
 | 新建 |  m  | |
-

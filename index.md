@@ -12,6 +12,8 @@ algo（tree）
 
 source code（spring）
 
+blog（index.md automatic）
+
 ### Doing（progress）: ###
 
 

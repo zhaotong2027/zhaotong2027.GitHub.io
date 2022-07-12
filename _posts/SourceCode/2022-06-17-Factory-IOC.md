@@ -83,7 +83,7 @@ public class ZTTest {
 }
 ```
 
-##### 5、调用，打印结果
+##### 5、运行并打印结果
 
 ```
 > Task :IOC:ZTTest.main()
