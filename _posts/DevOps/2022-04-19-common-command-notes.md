@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 常用命令备忘
+my_variable: common-command-notes.html
 ---
 
 本地的当前文件夹为	~/jekyll/zhaotong2027.GitHub.io/_posts

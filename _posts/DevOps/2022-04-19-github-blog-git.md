@@ -4,7 +4,7 @@ title: 在github上搭建个人博客
 tags: 运维
 ---
 
-# 一、在github上搭建个人博客
+# 在github上搭建个人博客
 
 参考：
 
@@ -14,21 +14,87 @@ https://zhuanlan.zhihu.com/p/111614119
 
 https://www.yshawlon.cn/1.html
 
-## 准备
+### 准备
 - 注册阿里账户
 - 填写实名认证信息（审核约一个工作日）
 - 挑选并购买域名
 - 配置解析 @ 即可
 - 申请免费的SSL（审核约一个工作日）
-## 设置博客
+### 设置博客
 - 申请github账号
 - 创建仓库名为 username.GitHub.io
 - sitting->pages，选择theme，设置购买的域名，勾选SSL
-## 写博客
-丰富博客内容或者简洁版写博客，其中链接为git上该资源链接
+### 写博客
+丰富博客内容或者简洁版写博客，其中链接为git上该资源链接。
 
-# 二、Hexo美化
-## 本地安装hexo
+
+
+下文有Jekyll版搭建及Hexo版搭建，两版类似建议搭建jekyll项目，理由是和github使用的一致可少走弯路，hexo很多深度定制化没经验的小白整理起来很耗时间，研究搭建固然好，但博客还是专注个人总结，不要忘记初衷。
+
+另：本文建议先阅读Hexo版再根据Jekyll版搭建
+
+
+
+
+
+搭建环境：Mac+github
+
+
+
+### 一、Jekyll版
+
+步骤类似：下载ruby---->rubygems----->jekyll---->创建
+
+下载ruby、rubygem及jekyll参考重装系统5.3、5.4
+
+创建：https://www.cnblogs.com/baiyangcao/p/jekyll_basic.html
+
+### 二、jekyll问题排查
+
+#### 2.1、报错：**cannot load such file -- minima**
+
+```
+gem install minima
+```
+
+#### 2.2、报错：**cannot load such file -- webrick**
+
+原因：新版本ruby不带webrick，需要下载添加依赖进去
+
+解决：
+
+```
+bundle add webrick 
+
+#如果报错，可以下载一下
+gem install webrick
+```
+
+#### 2.3、长时间不用项目报错，新建项目测试本地jekyll
+
+```
+cd ~/jekyll/
+jekyll new myblog  # 修改myblog文件夹下_config.yml theme: minima
+jekyll clean
+jekyll build
+jekyll server
+```
+
+打开http://127.0.0.1:4000/成功则本地jekyll没问题，删除myblog文件夹。
+
+#### 2.4、站内链接报错
+
+https://jekyllrb.com/docs/liquid/tags/
+
+
+
+# ===================================================
+
+
+
+### 一、Hexo版
+
+#### 1.1、本地安装hexo
 注：先安装node.js
 
 ```
@@ -45,7 +111,7 @@ npm install
 hexo g # 生成静态文件
 hexo s # 本地运行成功，按照提示打开连接可查看页面
 ```
-## 配置主题
+#### 1.2、配置主题
 到theme文件夹下，下载想用的主题，比如
 
 ```
@@ -80,7 +146,7 @@ deploy:
   branch: master
 ```
 
-## hexo推送代码
+#### 1.3、hexo推送代码
 
 再次本地运行，运行成功则在dos中用hexo上传代码：
 
@@ -90,7 +156,7 @@ hexo clean # 清除缓存（public文件夹）
 hexo g # 生成静态文件
 hexo d # 部署到服务器（GitHub）
 ```
-## hexo写文章
+#### 1.4、hexo写文章
 ```
 hexo new post "article title"
 ```
@@ -98,31 +164,15 @@ hexo new post "article title"
 
 主题NexT说明：http://theme-next.iissnan.com/getting-started.html
 
-## hexo本地失效办法
-```
-cd ~
-mv hexo hexo.bat
-mkdir hexo
-cd ~/hexo
-hexo init
-npm install
-hexo g
-hexo s
-```
-看是否成功运行，成功则继续：
+### 三、hexo设置及问题解决
 
-```
-mkdir zhaotong2027.GitHub.io
-git clone git@github.com:zhaotong2027/zhaotong2027.GitHub.io.git
-cd ~/hexo/zhaotong2027.GitHub.io
-hexo clean
-hexo g
-hexo s
-hexo d # 提交
-```
-正常运行则hexo.bat可删除
+#### 2.1、hexo个性化设置
 
-# 三、配置画图插件mermaid
+hexo帮助文档：https://hexo.io/docs/
+
+首页：https://zhuanlan.zhihu.com/p/138500516
+
+#### 2.2、配置画图插件mermaid
 ```
 npm install hexo-filter-mermaid-diagrams
 ```
@@ -158,15 +208,34 @@ graph TD;
     C-->D;
 ```
 
-# 四、个性化设置
+#### 2.3、hexo本地失效办法
 
-hexo帮助文档：https://hexo.io/docs/
+```
+cd ~
+mv hexo hexo.bat
+mkdir hexo
+cd ~/hexo
+hexo init
+npm install
+hexo g
+hexo s
+```
 
-首页：https://zhuanlan.zhihu.com/p/138500516
+看是否成功运行，成功则继续：
 
-# 五、踩坑
+```
+mkdir zhaotong2027.GitHub.io
+git clone git@github.com:zhaotong2027/zhaotong2027.GitHub.io.git
+cd ~/hexo/zhaotong2027.GitHub.io
+hexo clean
+hexo g
+hexo s
+hexo d # 提交
+```
 
-##### git页面不更新
+正常运行则hexo.bat可删除
+
+#### 2.4、git页面不更新
 
 报错：.gitmodules 中没有发现路径 '.deploy_git' 的子模组映射
 
@@ -183,37 +252,4 @@ hexo帮助文档：https://hexo.io/docs/
 ##### git页面不更新
 
 无报错，git用的UTC时间，国内UTC+8，只发布git最新时间的，理论上延迟8小时
-
-
-
-
-
-
-
-step2:jekyll
-
-步骤类似：下载ruby---->rubygems----->jekyll---->创建
-
-下载ruby、rubygem及jekyll参考重装系统5.3、5.4
-
-创建：https://www.cnblogs.com/baiyangcao/p/jekyll_basic.html
-
-报错：**cannot load such file -- minima**
-
-```
-gem install minima
-```
-
-报错：**cannot load such file -- webrick**
-
-原因：新版本ruby不带webrick，需要下载添加依赖进去
-
-解决：
-
-```
-bundle add webrick 
-
-#如果报错，可以下载一下
-gem install webrick
-```
 

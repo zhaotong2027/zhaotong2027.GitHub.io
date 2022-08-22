@@ -24,13 +24,13 @@ blog（index.md automatic）
 
 #### 一、运维（配置、搭建和维护）
 
-[同一台Mac配置多个github账户]({% post_url 2022-05-27-Mac-githubs %})
+[同一台Mac配置多个github账户]({% post_url 2022-05-27-mac-githubs %})
 
-[Mac重装系统]({% post_url 2022-04-19-myserver-setting %})
+[Mac重装系统]({% post_url 2022-04-19-mac-reinstall %})
 
-[服务器配置备忘]({% post_url 2022-04-19-myserver-setting %})
+[服务器配置备忘]({% post_url 2022-04-19-linux-myserver-setting %})
 
-[搭建git博客]({% post_url 2022-04-19-blog-git %})
+[搭建git博客]({% post_url 2022-04-19-github-blog-git %})
 
 #### 二、基础（网络、语言）
 
