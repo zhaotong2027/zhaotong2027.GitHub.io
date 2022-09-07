@@ -309,3 +309,12 @@ export PATH=${PATH}:/Users/zhaotong/.local/share/gem/ruby/3.1.0/bin
 gradle -v
 ```
 
+- 5.9 selenium
+
+```
+pip --version
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple selenium
+
+下载对应版本的webdriver
+```
+

@@ -3,7 +3,9 @@ layout: post
 title: 首页
 ---
 
-[常用命令备忘]({% post_url 2022-04-19-common-command-notes %})
+[常用命令备忘]({% link _posts/DevOps/2022-04-19-common-command-notes.md %})
+
+内部链接在github上用  site.baseurl 的形式，不能去掉baseurl！！！！！！
 
 ### TODO（progress）： ###
 
@@ -24,35 +26,35 @@ blog（index.md automatic）
 
 #### 一、运维（配置、搭建和维护）
 
-[同一台Mac配置多个github账户]({% post_url 2022-05-27-mac-githubs %})
+[同一台Mac配置多个github账户]({{ site.baseurl }}{% link _posts/DevOps/2022-05-27-mac-githubs.md %})
 
-[Mac重装系统]({% post_url 2022-04-19-mac-reinstall %})
+[Mac重装系统]({{ site.baseurl }}{% link _posts/DevOps/2022-04-19-mac-reinstall.md %})
 
-[服务器配置备忘]({% post_url 2022-04-19-linux-myserver-setting %})
+[服务器配置备忘]({{ site.baseurl }}{% link _posts/DevOps/2022-04-19-linux-myserver-setting.md %})
 
-[搭建git博客]({% post_url 2022-04-19-github-blog-git %})
+[搭建git博客]({{ site.baseurl }}{% link _posts/DevOps/2022-04-19-github-blog-git.md %})
 
 #### 二、基础（网络、语言）
 
-[七层协议]({% post_url 2022-04-19-OSI-TCPIP %})
+[七层协议]({{ site.baseurl }}{% link _posts/base/2022-04-19-OSI-TCPIP.md %})
 
-[编译&解释 Java&Python]({% post_url 2022-04-19-compile-interpretat-Java-Python %})
+[编译&解释 Java&Python]({{ site.baseurl }}{% link _posts/base/2022-04-19-compile-interpretat-Java-Python.md %})
 
 #### 三、算法
 
-[算法小结]({% post_url 2022-06-06-algorithm %})
+[算法小结]({{ site.baseurl }}{% link _posts/algo/2022-06-06-algorithm.md %})
 
-[爬楼梯 斐波那契数列 动态规划]({% post_url 2022-06-15-dynamic-programing %})
+[爬楼梯 斐波那契数列 动态规划]({{ site.baseurl }}{% link _posts/algo/2022-06-15-dynamic-programing.md %})
 
-#### 四、[源码]({% post_url 2022-06-13-source-code-spring %})
+#### 四、[源码]({{ site.baseurl }}{% link _posts/SourceCode/2022-06-13-source-code-spring.md %})
 
-[sping里的工厂模式BeanFactory --IOC]({% post_url 2022-06-17-Factory-IOC %})
+[sping里的工厂模式BeanFactory --IOC]({{ site.baseurl }}{% link _posts/SourceCode/2022-06-17-Factory-IOC.md %})
 
 #### 五、问题
 
-[allure在Mac中配置不成功]({% post_url 2022-04-19-shell-mac %})
+[allure在Mac中配置不成功]({{ site.baseurl }}{% link _posts/problem/2022-04-19-shell-mac.md %})
 
-[重启后git的ssh key失效]({% post_url 2022-04-19-ssh-agent %})
+[重启后git的ssh key失效]({{ site.baseurl }}{% link _posts/problem/2022-04-19-ssh-agent.md %})
 
 
 
