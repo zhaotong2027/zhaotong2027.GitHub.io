@@ -11,7 +11,7 @@ title: git常用命令、报错及服务器上的配置
 
 1、服务器环境：[服务端配置备忘]({{ site.baseurl }}{% link _posts/DevOps/2022-04-19-linux-myserver-setting.md %})
 
-2、本地git配置：[同一台Mac配置多个github账户]({{ site.baseurl }}{% link _posts/DevOps/2022-05-27-mac-githubs.md %})
+2、本地git配置：[同一台Mac配置多个github账户]
 
  
 
