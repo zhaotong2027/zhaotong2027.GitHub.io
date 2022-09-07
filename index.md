@@ -26,7 +26,7 @@ blog（index.md automatic）
 
 #### 一、运维（配置、搭建和维护）
 
-[同一台Mac配置多个github账户]
+[同一台Mac配置多个github账户]({{ site.baseurl }}{% link _posts/DevOps/2022-05-27-mac-githubs.md %})
 
 [Mac重装系统]({{ site.baseurl }}{% link _posts/DevOps/2022-04-19-mac-reinstall.md %})
 

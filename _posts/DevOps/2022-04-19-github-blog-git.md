@@ -14,17 +14,28 @@ https://zhuanlan.zhihu.com/p/111614119
 
 https://www.yshawlon.cn/1.html
 
+
+
 ### 准备
+
 - 注册阿里账户
 - 填写实名认证信息（审核约一个工作日）
 - 挑选并购买域名
 - 配置解析 @ 即可
 - 申请免费的SSL（审核约一个工作日）
+
+
+
 ### 设置博客
+
 - 申请github账号
 - 创建仓库名为 username.GitHub.io
 - sitting->pages，选择theme，设置购买的域名，勾选SSL
+
+
+
 ### 写博客
+
 丰富博客内容或者简洁版写博客，其中链接为git上该资源链接。
 
 
