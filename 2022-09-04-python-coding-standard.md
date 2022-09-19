@@ -7,8 +7,31 @@ title: python编码规范
 
 
 
+PEP8：https://peps.python.org/pep-0008/#blank-lines
+
 
 
 注释：
 
 如无必要，勿增实体。
+
+
+
+
+
+导入
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

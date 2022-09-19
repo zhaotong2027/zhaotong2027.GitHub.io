@@ -26,7 +26,7 @@ blog（index.md automatic）
 
 #### 一、运维（配置、搭建和维护）
 
-[同一台Mac配置多个github账户]({{ site.baseurl }}{% link _posts/DevOps/2022-05-27-mac-githubs.md %})
+[同一台Mac配置多个github账户] _posts/DevOps/2022-05-27-mac-githubs.md
 
 [Mac重装系统]({{ site.baseurl }}{% link _posts/DevOps/2022-04-19-mac-reinstall.md %})
 
@@ -56,7 +56,11 @@ blog（index.md automatic）
 
 [重启后git的ssh key失效]({{ site.baseurl }}{% link _posts/problem/2022-04-19-ssh-agent.md %})
 
+#### 六、心理学小技巧
 
+[获得派]({{ site.baseurl }}{% link _posts/psychology/2022-08-16-gain.md %})
+
+[驱动力状态自测]({{ site.baseurl }}{% link _posts/psychology/2022-07-12-status-self.md %})
 
 ### Postponed： ###
 
