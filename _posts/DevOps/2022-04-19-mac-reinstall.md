@@ -189,6 +189,10 @@ https://sameen.art/software-tool/adobe2020vposy.html
 
 https://xclient.info/s/navicat-premium.html
 
+- 4.5 mindmanager
+
+https://lapulace.com/mindmanager2020.html saner/123456
+
 ## 5.开发环境安装
 - 5.1 allure
 ```
@@ -318,3 +322,44 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple selenium
 下载对应版本的webdriver
 ```
 
+- 5.10 curl
+
+```
+brew search curl
+brew install curl
+...
+echo 'export PATH="/usr/local/opt/curl/bin:$PATH"' >> ~/.zshrc
+```
+
+设置环境变量~/.zshrc（配完记得启用生效source ~/.zshrc）
+
+```
+#curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
+```
+
+- 5.11 mysql
+
+官网下载安装，账密：root 爱你我，现运行mysql版本为V8.0.30
+
+参考：https://zhuanlan.zhihu.com/p/360858309
+
+常用命令：
+
+启动数据库	sudo mysql.server start/stop/status
+
+mysql -u root -p
+
+查看配置文件位置：mysql --help|grep my.cnf	当前使用的配置文件为 /usr/local/mysql/etc/my.cnf
+
+- 5.12 jira
+
+官网下载安装，需要的java版本为11或8，现运行java版本为11，jira版本为V8.8.0
+
+JIRA Home Directory：/Users/zhaotong/jira
+
+参考：https://zhuanlan.zhihu.com/p/114192816
+
+常用命令：
+
+启动jira	/usr/local/atlassian-jira-software-8.8.0-standalone/bin/start-jira.sh	默认地址	localhost:8080
