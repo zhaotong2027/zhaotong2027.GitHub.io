@@ -40,6 +40,8 @@ blog（index.md automatic）
 
 [编译&解释 Java&Python]({{ site.baseurl }}{% link _posts/base/2022-04-19-compile-interpretat-Java-Python.md %})
 
+[【笔记】简单创建vue项目并打包]({{ site.baseurl }}{% link _posts/base/2022-10-10-demo-vue.md %})
+
 #### 三、算法
 
 [算法小结]({{ site.baseurl }}{% link _posts/algo/2022-06-06-algorithm.md %})
