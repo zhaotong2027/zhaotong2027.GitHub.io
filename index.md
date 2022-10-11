@@ -30,7 +30,7 @@ blog（index.md automatic）
 
 [服务器配置备忘]({{ site.baseurl }}{% link _posts/DevOps/2022-04-19-linux-myserver-setting.md %})
 
-[同一台Mac配置多个github账户]({{ site.baseurl }}{% link _posts/2022-10-11-mac-githubs.md %})
+[同一台Mac配置多个github账户]({{ site.baseurl }}{% link _posts/DevOps/2022-10-11-mac-githubs.md %})
 
 [搭建git博客]({{ site.baseurl }}{% link _posts/DevOps/2022-04-19-github-blog-git.md %})
 
