@@ -68,4 +68,4 @@ blog（index.md automatic）
 
 [rvm]( https://www.jianshu.com/p/94bb3fc95aea) (安装rvm失败)
 
-jekyll（mermaid、directory）
+jekyll（mermaid）
