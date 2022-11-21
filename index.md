@@ -64,6 +64,8 @@ blog（index.md automatic）
 
 [驱动力状态自测]({{ site.baseurl }}{% link _posts/psychology/2022-07-12-status-self.md %})
 
+[心理学书籍推荐]({{ site.baseurl }}{% link _posts/psychology/2022-11-17-booklist.md %})
+
 ### Postponed： ###
 
 [rvm]( https://www.jianshu.com/p/94bb3fc95aea) (安装rvm失败)
