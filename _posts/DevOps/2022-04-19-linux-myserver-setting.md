@@ -57,14 +57,14 @@ https://blog.csdn.net/cuman/article/details/112394423
 | jira | /opt/atlassian/jira/bin/stop-jira.sh /opt/atlassian/jira/bin/start-jira.sh / /opt/atlassian/jira/uninstall | Y |
 
 
-| 软件名   | 位置 | 配置文件位置 |     日志位置 |
-| :----- | :--: | :-------: | :-------: |
-| nginx | /usr/local/nginx-1.8.0 | /usr/local/nginx/conf/ |     日志位置 |
-| mysql | /usr/bin/mysql | /etc/my.cnf /etc/profile | /var/log/mysqld.log |
-| jira | /opt/atlassian/jira /var/atlassian/application-data/jira | /etc/profile /opt/atlassian/jira/conf/server.xml  | 日志 ｜|
-| confluence | /opt/atlassian/confluence /var/atlassian/application-data/confluence | /opt/atlassian/confluence/confluence/WEB-INF/classes/confluence-init.properties /opt/atlassian/confluence/conf/server.xml | /var/atlassian/application-data/confluence/logs/atlassian-confluence.log |
-| crowd | /opt/atlassian/crowd /var/crowd-home | /opt/atlassian/crowd/crowd-webapp/WEB-INF/classes/crowd-init.properties | /var/crowd-home/logs/atlassian-crowd.log |
-| gitlab | /etc/gitlab | /etc/gitlab/gitlab.rb /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml | /var/log/gitlab |
+| 启动顺序 | 软件名   | 位置 | 配置文件位置 |    日志位置 |
+| :----- | :--: | :-------: | :-------: | :-------: |
+| 1 | nginx | /usr/local/nginx-1.8.0 | /usr/local/nginx/conf/ |      |
+| 2 | mysql | /usr/bin/mysql | /etc/my.cnf /etc/profile | /var/log/mysqld.log |
+| 5 | jira | /opt/atlassian/jira /var/atlassian/application-data/jira | /etc/profile /opt/atlassian/jira/conf/server.xml  |  |
+| 4 | confluence | /opt/atlassian/confluence /var/atlassian/application-data/confluence | /opt/atlassian/confluence/confluence/WEB-INF/classes/confluence-init.properties /opt/atlassian/confluence/conf/server.xml | /var/atlassian/application-data/confluence/logs/atlassian-confluence.log |
+| 3 | crowd | /opt/atlassian/crowd /var/crowd-home | /opt/atlassian/crowd/crowd-webapp/WEB-INF/classes/crowd-init.properties | /var/crowd-home/logs/atlassian-crowd.log |
+| - | gitlab | /etc/gitlab | /etc/gitlab/gitlab.rb /opt/gitlab/embedded/service/gitlab-rails/config/gitlab.yml | /var/log/gitlab |
 
 
 https://cloud.tencent.com/developer/article/1841809
