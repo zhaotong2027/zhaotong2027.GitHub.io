@@ -96,11 +96,33 @@ alias python="/usr/local/bin/python3
 
 alias python的地址可以用which python3查找
 
+20230524 python3.9和3.10很多不兼容，切换回3.7或3.8
+
+```
+brew search python
+brew install python@3.8
+```
+
+设置环境变量~/.zshrc（配完记得启用生效source ~/.zshrc）
+
+```
+# Setting PATH for Python 3.8
+export PATH="/usr/local/opt/python@3.8/libexec/bin:$PATH"
+alias python="/usr/local/bin/python3
+```
+
 2.4.2 安装pip
 
 ```
 curl https://bootstrap.pypa.io/get-pip.py | python3
 pip3 --version
+```
+
+2.4.3 安装pip_search
+
+```
+pip install pip-search
+pip_search tensorflow
 ```
 
 - 2.5 drew安装node.js
@@ -192,6 +214,10 @@ https://xclient.info/s/navicat-premium.html
 - 4.5 mindmanager
 
 https://lapulace.com/mindmanager2020.html saner/123456
+
+- 4.6 obsidian
+
+https://obsidian.md/
 
 ## 5.开发环境安装
 - 5.1 allure
@@ -363,3 +389,28 @@ JIRA Home Directory：/Users/zhaotong/jira
 常用命令：
 
 启动jira	/usr/local/atlassian-jira-software-8.8.0-standalone/bin/start-jira.sh	默认地址	localhost:8080
+
+- 5.13 grafana
+
+```
+brew install grafana
+```
+
+参考：https://cloud.tencent.com/developer/article/1481832#:~:text=%E4%BD%BF%E7%94%A8%E5%A6%82%E4%B8%8B%E5%91%BD%E4%BB%A4%E5%90%AF%E5%8A%A8%20Grafana%20%EF%BC%9A%20brew,services%20start%20grafana%201.3%20%E9%85%8D%E7%BD%AE
+
+5.14 tenserflow
+
+```
+python -v
+python -m pip --version
+pip install tensorflow
+
+pip install tensorflow-gpu
+>> activate tensorflow
+>> python (activating python shell)
+>> import tensorflow as tf
+>> hello = tf.constant(‘Hello, Tensorflow!’)
+>> sess = tf.Session()
+>> print(sess.run(hello))
+```
+
