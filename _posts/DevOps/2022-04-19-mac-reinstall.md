@@ -91,7 +91,7 @@ brew install python@3.9
 ```
 # Setting PATH for Python 3.9
 export PATH="/usr/local/opt/python@3.9/libexec/bin:$PATH"
-alias python="/usr/local/bin/python3
+alias python="/usr/local/bin/python3"
 ```
 
 alias python的地址可以用which python3查找
@@ -106,9 +106,14 @@ brew install python@3.8
 设置环境变量~/.zshrc（配完记得启用生效source ~/.zshrc）
 
 ```
-# Setting PATH for Python 3.8
-export PATH="/usr/local/opt/python@3.8/libexec/bin:$PATH"
-alias python="/usr/local/bin/python3
+# 默认python3.8
+# python3.8 一般默认装3.7或3.8
+PATH="/usr/local/opt/python@3.8/libexec/bin:$PATH"
+# python3.9和10.X很多插件不兼容
+# PYTHON_3.9_PATH="/usr/local/opt/python@3.9/libexec/bin:$PATH"
+
+alias python="/usr/local/Cellar/python@3.8/3.8.16/Frameworks/Python.framework/Versions/3.8/bin/python3.8"
+# alias python="/usr/local/Cellar/python@3.9/3.9.16/Frameworks/Python.framework/Versions/3.9/bin/python3.9"
 ```
 
 2.4.2 安装pip
