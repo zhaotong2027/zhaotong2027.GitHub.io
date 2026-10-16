@@ -13,7 +13,7 @@ algo（tree）
 
 source code（spring）
 
-blog（index.md automatic）
+[纯 AI 生成 blog]( https://blog.zhaotong.fun/#/ )
 
 ### Doing（progress）: ###
 
